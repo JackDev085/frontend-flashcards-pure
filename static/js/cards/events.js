@@ -11,5 +11,5 @@ nextCard.addEventListener("click", () => {
 });
 
 listen.addEventListener("click", () => {
-  audio.innerHTML = `<audio controls autoplay class="disabled"><source src=${URL_BASE}/static/audios/audio${cardId.textContent}.mp3 type="audio/mpeg"></audio>`;
+  audio.innerHTML = `<audio controls autoplay class="disabled"><source src="/static/audios/audio${cardId.textContent}.mp3" type="audio/mpeg"></audio>`;
 });
