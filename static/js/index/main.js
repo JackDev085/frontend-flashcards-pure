@@ -3,6 +3,15 @@ const categories = document.querySelector(".categories");
 const themas = document.querySelector(".themes");
 const URL_BASE = "https://flash-cards-fastapi.vercel.app";
 const spinner = document.querySelector(".spinner");
+const doubt_button = document.querySelector(".doubt-button");
+const doubt_text = document.querySelector(".doubt-text");
+const doubt = document.querySelector(".doubt");
+const doubt_text_button = document.querySelector(".fa-question");
+
+
+doubt_text_button.addEventListener("click", () => {
+  doubt_text.classList.toggle("hidden");
+});
 
 async function searchCategoriesAndThemes() {
   const categoriesRequest = fetch(URL_BASE + "/flashcards/categories/");

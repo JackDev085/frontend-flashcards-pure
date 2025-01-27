@@ -1,6 +1,7 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc7082;
+  --secondary-color2: #00000082;
   --highlight-color: #d0ad23;
   --accent-color: #e74d3cca;
   --text-color: #ecf0f1;
@@ -46,6 +47,7 @@ header {
   gap: 1rem;
   width: 100%;
   margin: 0 auto;
+  
 }
 .disabled-link {
   pointer-events: none;
@@ -78,3 +80,66 @@ button {
   }
 }
 */
+.doubt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+  right:  2rem;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+.doubt-text{
+  bottom: 1rem;
+  right:  1rem;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.doubt-button{
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.doubt:hover{
+  opacity: 1;
+}
+.hidden{
+  display: none;
+}
+
+#doubt-link{
+  color: var(--secondary-color2);
+  text-decoration:dashed;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+  .header {
+    padding: 0.5rem;
+  }
+  .header a {
+    padding: 0.5rem 0.7rem;
+  }
+  .doubt{
+    bottom: 1rem;
+    right:  1rem;
+    min-width: 1rem;
+    min-height: 1rem;
+  }
+  .doubt-text{
+    padding: 1rem;
+  }
+  .doubt-button{
+    padding: 0.5rem;
+  }
+  
+}
