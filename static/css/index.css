@@ -26,3 +26,25 @@
   background-color: var(--primary-color);
   color: var(--background-color);
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap:.2rem;
+  font-size: 4rem;
+}
+.load{
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}

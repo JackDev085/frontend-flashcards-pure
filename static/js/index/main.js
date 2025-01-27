@@ -2,6 +2,7 @@ const main = document.querySelector(".main");
 const categories = document.querySelector(".categories");
 const themas = document.querySelector(".themes");
 const URL_BASE = "https://flash-cards-fastapi.vercel.app";
+const spinner = document.querySelector(".spinner");
 
 async function searchCategoriesAndThemes() {
   const categoriesRequest = fetch(URL_BASE + "/flashcards/categories/");
@@ -15,6 +16,7 @@ async function searchCategoriesAndThemes() {
       throw new Error("Erro ao buscar categorias e temas");
     })
     .then((data) => {
+      spinner.style.display = "none";
       let categoriesData = data[0];
       let themesData = data[1];
       const themas = [];
@@ -58,4 +60,6 @@ async function searchCategoriesAndThemes() {
       console.error(error);
     });
 }
-document.addEventListener("DOMContentLoaded", searchCategoriesAndThemes);
+document.addEventListener("DOMContentLoaded", ()=>{
+  searchCategoriesAndThemes();
+});

@@ -13,11 +13,12 @@ body {
   background-color: var(--background-color2);
   color: var(--text-color);
 }
-h1 {
+h1,h2 {
   text-align: center;
   margin: 2rem 0;
   font-size: 1.6rem;
 }
+
 header {
   background-color: var(--primary-color);
   width: 100vw;

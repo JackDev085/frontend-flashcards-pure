@@ -11,6 +11,7 @@ const listen = document.querySelector(".listen");
 const audio = document.querySelector(".audio");
 const uri = window.location.href;
 const numDeck = uri.split("?").pop()[6];
+const card_name = document.querySelector(".card-name");
 
 function virarCarta() {
   if (cardBack.classList.contains("disabled")) {
@@ -34,6 +35,7 @@ function cardAleatorio() {
       throw new Error("Request failed!");
     })
     .then((data) => {
+      card_name.textContent = data.theme_name ?? "flashcard deck";
       let card = new Flashcard(data.question, data.answer, data.id);
       textFront.textContent = card.getQuestion();
       textBack.textContent = card.getAnswer();
