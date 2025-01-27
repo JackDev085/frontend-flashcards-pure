@@ -40,6 +40,7 @@ async function searchCategoriesAndThemes() {
                 <div>
                   `;
           return;
+          
         }
         let category_id = category.id;
         // for each para imprimir os temas relacionados a categoria
