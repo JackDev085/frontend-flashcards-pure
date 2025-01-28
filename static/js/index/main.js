@@ -1,7 +1,8 @@
 const main = document.querySelector(".main");
 const categories = document.querySelector(".categories");
 const themas = document.querySelector(".themes");
-const URL_BASE = "https://flash-cards-fastapi.vercel.app";
+//const URL_BASE = "https://flash-cards-fastapi.vercel.app";
+const URL_BASE = "http://127.0.0.1:8000";
 const spinner = document.querySelector(".spinner");
 const doubt_button = document.querySelector(".doubt-button");
 const doubt_text = document.querySelector(".doubt-text");
@@ -55,7 +56,6 @@ async function searchCategoriesAndThemes() {
               
               ${themas
                 .map((theme) => {
-                  console.log(theme);
                   if (theme.category_id == category_id)
                     return `<div class="thema"><a href="cards.html?theme=${theme.id}">${theme.theme_name}</a> </div>`;
                 })

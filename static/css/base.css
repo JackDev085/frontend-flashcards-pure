@@ -134,6 +134,7 @@ button {
     right:  1rem;
     min-width: 1rem;
     min-height: 1rem;
+    position: fixed;
   }
   .doubt-text{
     padding: 1rem;
